@@ -51,18 +51,21 @@ class Translation(object):
 ├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
 ╰───────────────⍟</b>"""
 
-  DONATE_TXT = """<b>
-╭───────────⍟
-├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
-╰───────────────⍟</b>"""  
+  DONATE_TXT = """<b><l>if you liked me ❤️. consider make a donation to support my developer 👦
 
-  STATUS_TXT = """<b><u>Bot Status</u>
+<code>UPI ID - mohammedrznx@fam</code></l></b>"""  
 
-👨 ᴜsᴇʀs  : {}
-
-🤖 ʙᴏᴛs : {}
-
-📣 ᴄʜᴀɴɴᴇʟ  : {} 
+  STATUS_TXT = """<b>╔════❰ ʙᴏᴛ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼👱 ᴛᴏᴛᴀʟ ᴜsᴇʀs: {}
+║┃
+║┣⪼🤖 ᴛᴏᴛᴀʟ ʙᴏᴛ: {}
+║┃
+║┣⪼🔃 ғᴏʀᴡᴀʀᴅɪɴɢs: {}
+║┃
+║┣⪼🔍 ᴜɴᴇǫᴜɪꜰʏɪɴɢs: {}
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱❁۪۪
 </b>""" 
   
   FROM_MSG = "<b>❪ SET SOURCE CHAT ❫\n\nForward the last message or last message link of source chat.\n/cancel - cancel this process</b>"
