@@ -54,7 +54,7 @@ async def start(client, message):
         gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     else:
         gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
-await client.send_message(
+    await client.send_message(
         chat_id=message.chat.id,
         text=Translation.START_TXT.format(message.from_user.mention, gtxt),
         reply_markup=reply_markup
