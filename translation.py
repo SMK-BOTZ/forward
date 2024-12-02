@@ -2,54 +2,53 @@ import os
 from config import Config
 
 class Translation(object):
-  START_TXT = """<b>Hᴇʏ {},{}</b>
+  START_TXT = """<b>ʜɪ {}
 
-◈ I Aᴍ A Aᴅᴠᴀɴᴄᴇᴅ Aᴜᴛᴏ Fᴏʀᴡᴀʀᴅ Bᴏᴛ.
-◈ I Cᴀɴ Fᴏʀᴡᴀʀᴅ Aʟʟ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Oɴᴇ Cʜᴀɴɴᴇʟ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀɴɴᴇʟ.
-◈ Cʟɪᴄᴋ Hᴇʟᴘ Bᴜᴛᴛᴏɴ Tᴏ Kɴᴏᴡ Mᴏʀᴇ Aʙᴏᴜᴛ Mᴇ.
+ɪ'ᴍ ᴀ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀᴜᴛᴏ ꜰᴏʀᴡᴀʀᴅ ʙᴏᴛ
+ɪ ᴄᴀɴ ꜰᴏʀᴡᴀʀᴅ ᴀʟʟ ᴍᴇssᴀɢᴇ ꜰʀᴏᴍ ᴏɴᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟ
 
-<blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ: <a href='https://t.me/JISSHU_BOTS'>Jɪssʜᴜ ʙᴏᴛs</a></blockquote></b>"""
+ᴄʟɪᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ</b>"""
 
 
-  HELP_TXT = """<b><u>🛠️ HELP</b></u>
+  HELP_TXT = """<b><u>🔆 HELP</u>
 
-<u>**📚 Available commands:**</u>
-<b>⏣ __/start - check I'm alive__ 
-⏣ __/forward - forward messages__
-⏣ __/unequify - delete duplicate messages in channels__
-⏣ __/settings - configure your settings__
-⏣ __/reset - reset your settings__</b>
+📚 Available commands:
+⏣ /start - check I'm alive 
+⏣ /forward - forward messages
+⏣ /private_forward - forward messages from private chat
+⏣ /unequify - delete duplicate media messages in chats
+⏣ /settings - configure your settings
+⏣ /stop - stop your ongoing tasks
+⏣ /reset - reset your settings
 
-<b><u>💢 Features:</b></u>
-<b>► __Forward message from public channel to your channel without admin permission. if the channel is private need admin permission__
-► __Forward message from private channel to your channel by using userbot(user must be member in there)__
-► __custom caption__
-► __custom button__
-► __support restricted chats__
-► __skip duplicate messages__
-► __filter type of messages__
-► __skip messages based on extensions & keywords & size__</b>
+💢 Features:
+► Forward message from public channel to your channel without admin permission. if the channel is private need admin permission
+► Forward message from private channel to your channel by using userbot(user must be member in there)
+► custom caption
+► custom button
+► support restricted chats
+► skip duplicate messages
+► filter type of messages
+► skip messages based on extensions & keywords & size</b>
 """
   
   HOW_USE_TXT = """<b><u>⚠️ Before Forwarding:</b></u>
+► First add a bot or userbot
+► add atleast one target channel <code>(your bot/userbot must be admin in there)</code>
+► You can add chats or bots by using /settings
+► if the Source Channel is private your userbot must be member in there or your bot must need admin permission in there also
+► Then use /forward to forward messages</b>"""
   
-<b>► __Add A Bot Or Userbot__
-► __Add Atleast One To Channel (Your Bot/Userbot Must Be Admin In There)
-► __You Can Add Chats Or Bots By Using /settings__
-► __if the **From Channel** is private your userbot must be member in there or your bot must need admin permission in there also__
-► __Then use /forward to forward messages__</b>"""
-  
-  ABOUT_TXT = """<b>
-╭───────────⍟
-├◈ ᴍy ɴᴀᴍᴇ : <a href=https://t.me/Jisshu_forward_bot>Auto Forward Bot</a>
-├◈ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href=https://t.me/MR_JISSHU>Mr.Jisshu</a> 
-├◈ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ: <a href=https://t.me/JISSHU_BOTS>JISSHU BOTS </a>   
-├◈ Lɪʙʀᴀʀy : <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
-├◈ Lᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org/>Pʏᴛʜᴏɴ 𝟹</a>
-├◈ Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com/>Mᴏɴɢᴏ DB</a>
-├◈ Bot Vᴇʀꜱɪᴏɴ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>V-2.4.1
-├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
-╰───────────────⍟</b>"""
+  ABOUT_TXT = """<b>╔════❰ ғᴏʀᴡᴀʀᴅ ʙᴏᴛ ❱═❍⊱❁۪۪
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼📃ʙᴏᴛ : <a href=https://t.me/VR_Forward_Bot>ꜰᴏʀᴡᴀʀᴅ ʙᴏᴛ</a>
+║┣⪼👦ᴄʀᴇᴀᴛᴏʀ : <a href=https://t.me/VR_Necromancer>ɴᴇᴄʀᴏᴍᴀɴᴄᴇʀ</a>
+║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : ᴀʟᴘʜᴀ ᴠʀ
+║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ3
+║┣⪼📚ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ ᴀsʏɴᴄɪᴏ 2.0.0 
+║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 2.4.2
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱❁۪۪</b>"""
 
   DONATE_TXT = """<b><l>if you liked me ❤️. consider make a donation to support my developer 👦
 
