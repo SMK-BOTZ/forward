@@ -51,6 +51,11 @@ class Translation(object):
 ├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
 ╰───────────────⍟</b>"""
 
+  DONATE_TXT = """<b>
+╭───────────⍟
+├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
+╰───────────────⍟</b>"""  
+
   STATUS_TXT = """<b><u>Bot Status</u>
 
 👨 ᴜsᴇʀs  : {}
