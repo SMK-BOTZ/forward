@@ -12,13 +12,12 @@ from pyrogram.types import *
 TIMEZONE = "Asia/Kolkata"
 
 main_buttons = [[
-        InlineKeyboardButton('🦋 ᴜᴘᴅᴀᴛᴇs ', url='https://t.me/JISSHU_BOTS'),
-        InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ ✨', url='https://t.me/Jisshu_support')
+        InlineKeyboardButton('❗️ʜᴇʟᴘ', callback_data='help')
         ],[
-        InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 😎', callback_data='about')
+        InlineKeyboardButton('📜ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vr_unreal'),
+        InlineKeyboardButton('📡ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vr_support')
         ],[
-        InlineKeyboardButton('🛠️ sᴇᴛᴛɪɴɢs ⚙️', callback_data='settings#main')
+        InlineKeyboardButton('✨ᴀʙᴏᴜᴛ ᴜꜱ', callback_data='donate')
         ]]
 #===================Start Function===================#
 
@@ -136,6 +135,15 @@ async def about(bot, query):
         media=InputMediaPhoto(
         media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
         caption=Translation.ABOUT_TXT),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
+        )
+
+@Client.on_callback_query(filters.regex(r'^donate'))
+async def donate(bot, query):
+    await query.message.edit_media(
+        media=InputMediaPhoto(
+        media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
+        caption=Translation.DONATE_TXT),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
         )
 
