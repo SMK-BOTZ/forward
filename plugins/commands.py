@@ -94,7 +94,7 @@ async def helpcb(bot, query):
 async def how_to_use(bot, query):
     await query.message.edit_text(
         text=Translation.HOW_USE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
         disable_web_page_preview=True
     )
 
@@ -123,7 +123,7 @@ async def about(bot, query):
         media=InputMediaPhoto(
         media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
         caption=Translation.ABOUT_TXT),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
         )
 
 @Client.on_callback_query(filters.regex(r'^donate'))
@@ -132,7 +132,7 @@ async def donate(bot, query):
         media=InputMediaPhoto(
             media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
             caption=Translation.DONATE_TXT),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
 
 
@@ -142,7 +142,7 @@ async def status(bot, query):
     total_channels = await db.total_channels()
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings, total_channels, temp.BANNED_USERS ),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
     )
