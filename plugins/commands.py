@@ -84,7 +84,7 @@ async def helpcb(bot, query):
             InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
             InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
             ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
             InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
             ]]
         ))
@@ -128,7 +128,7 @@ async def about(bot, query):
 async def donate(bot, query):
     await query.message.edit_text(
         text=Translation.DONATE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='start')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]])
     )
 
 
