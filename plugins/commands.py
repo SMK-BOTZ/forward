@@ -84,7 +84,7 @@ async def helpcb(bot, query):
             InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
             InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
             ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='donate'),
             InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
             ]]
         ))
@@ -128,7 +128,7 @@ async def about(bot, query):
 async def donate(bot, query):
     await query.message.edit_text(
         text=Translation.DONATE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]])
     )
 
 
@@ -138,7 +138,7 @@ async def status(bot, query):
     total_channels = await db.total_channels()
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings, total_channels, temp.BANNED_USERS ),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
     )
