@@ -54,11 +54,10 @@ async def start(client, message):
         gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     else:
         gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
-    await client.send_photo(
+await client.send_message(
         chat_id=message.chat.id,
-        photo=Config.PICS,
-        reply_markup=reply_markup,
-        caption=Translation.START_TXT.format(message.from_user.mention, gtxt)
+        text=Translation.START_TXT.format(message.from_user.mention, gtxt),
+        reply_markup=reply_markup
     )
 
 #==================Restart Function==================#
