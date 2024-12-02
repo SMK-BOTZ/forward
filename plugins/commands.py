@@ -13,12 +13,12 @@ from pyrogram.types import *
 TIMEZONE = "Asia/Kolkata"
 
 main_buttons = [[
-        InlineKeyboardButton('❗️ʜᴇʟᴘ', callback_data='help')
+        InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
         ],[
-        InlineKeyboardButton('📜ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vr_unreal'),
-        InlineKeyboardButton('📡ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vr_support')
+        InlineKeyboardButton('📜 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vr_unreal'),
+        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vr_support')
         ],[
-        InlineKeyboardButton('✨ᴀʙᴏᴜᴛ ᴜꜱ', callback_data='donate')
+        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ]]
 #===================Start Function===================#
 
