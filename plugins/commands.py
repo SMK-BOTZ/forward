@@ -17,7 +17,7 @@ main_buttons = [[
         InlineKeyboardButton('📜ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vr_unreal'),
         InlineKeyboardButton('📡ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vr_support')
         ],[
-        InlineKeyboardButton('✨ᴀʙᴏᴜᴛ ᴜꜱ', callback_data='donate')
+        InlineKeyboardButton('✨ᴀʙᴏᴜᴛ ᴜꜱ', callback_data='about')
         ]]
 #===================Start Function===================#
 
@@ -137,16 +137,6 @@ async def about(bot, query):
         caption=Translation.ABOUT_TXT),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
         )
-
-@Client.on_callback_query(filters.regex(r'^donate'))
-async def donate(bot, query):
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-            media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
-            caption=Translation.DONATE_TXT),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
-    )
-
 
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
