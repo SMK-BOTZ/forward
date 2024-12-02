@@ -50,9 +50,9 @@ class Translation(object):
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪</b>"""
 
-  DONATE_TXT = """<b><l>if you liked me ❤️. consider make a donation to support my developer 👦
+  DONATE_TXT = """if you liked me ❤️. consider make a donation to support my developer 👦
 
-<code>UPI ID - mohammedrznx@fam</code></l></b>"""  
+UPI ID - <code>mohammedrznx@fam</code>"""  
 
   STATUS_TXT = """<b>╔════❰ ʙᴏᴛ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
