@@ -110,11 +110,11 @@ async def back(bot, query):
         gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     else:
         gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-        media=Config.PICS,
-        caption=Translation.START_TXT.format(query.from_user.mention, gtxt)),
-        reply_markup=reply_markup)
+    
+    await query.message.edit_text(
+        text=Translation.START_TXT.format(query.from_user.mention, gtxt),
+        reply_markup=reply_markup
+    )
         
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
@@ -128,7 +128,7 @@ async def about(bot, query):
 async def donate(bot, query):
     await query.message.edit_text(
         text=Translation.DONATE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
 
 
@@ -138,7 +138,7 @@ async def status(bot, query):
     total_channels = await db.total_channels()
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings, total_channels, temp.BANNED_USERS ),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
     )
