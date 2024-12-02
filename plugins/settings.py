@@ -38,8 +38,6 @@ async def settings_query(bot, query):
         buttons.append([InlineKeyboardButton('✚ Add bot ✚', 
                          callback_data="settings#addbot")])
         buttons.append([InlineKeyboardButton('✚ Add User bot ✚', 
-                         callback_data="settings#adduserbot")])
-        buttons.append([InlineKeyboardButton('✚ Login User bot ✚', 
                          callback_data="settings#addlogin")])
      buttons.append([InlineKeyboardButton('↩ Back', 
                       callback_data="settings#main")])
