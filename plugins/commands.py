@@ -129,6 +129,16 @@ async def about(bot, query):
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
         )
 
+@Client.on_callback_query(filters.regex(r'^donate'))
+async def donate(bot, query):
+    await query.message.edit_media(
+        media=InputMediaPhoto(
+            media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
+            caption=Translation.DONATE_TXT),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
+    )
+
+
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
