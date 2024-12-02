@@ -51,16 +51,6 @@ class Translation(object):
 ├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
 ╰───────────────⍟</b>"""
 
-  DONATE_TXT = """<b>
-╭───────────⍟
-├◈ ᴍy ɴᴀᴍᴇ : <a href=https://t.me/Jisshu_forward_bot>Auto Forward Bot</a>
-├◈ fuxk : <a href=https://t.me/MR_JISSHU>Mr.Jisshu</a> 
-├◈ you: <a href=https://www.python.org/>Pʏᴛʜᴏɴ 𝟹</a>
-├◈ Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com/>Mᴏɴɢᴏ DB</a>
-├◈ Bot Vᴇʀꜱɪᴏɴ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>V-2.4.1
-├◈ Bᴏᴛ Sᴏᴜʀᴄᴇ: <a href=https://github.com/Jisshubot/Jisshu-forward-bot>My Repo</a>
-╰───────────────⍟</b>"""
-  
   STATUS_TXT = """<b><u>Bot Status</u>
 
 👨 ᴜsᴇʀs  : {}
