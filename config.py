@@ -8,8 +8,6 @@ class Config:
     BOT_TOKEN = environ.get("BOT_TOKEN", "7064899225:AAF80y8D2VbmKb8S_k5PgKBq5hjRV5L3Rcs") 
     BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '6551906246').split()]
     BOT_SESSION = environ.get("BOT_SESSION", "bot") 
-
-    PICS = (environ.get('PICS', 'https://graph.org/file/bebe0969b633bf2ba991b-75eeb70573bcda4dad.png'))
     
     DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://sahilkaleech:ffmFFKUQXBFDgtxr@cluster0.fn00j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
