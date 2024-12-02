@@ -47,15 +47,6 @@ async def start(client, message):
             )
             return
 
-    if not await db.is_user_exist(user.id):
-        await db.add_user(user.id, message.from_user.mention)
-        # Log the new user to the log channel
-        log_channel = Config.LOG_CHANNEL # Replace with your log channel ID
-        await client.send_message(
-            chat_id=log_channel,
-            text=f"#NewUser\n\nIᴅ - {user.id}\nNᴀᴍᴇ - {message.from_user.mention}"
-        )
-
     reply_markup = InlineKeyboardMarkup(main_buttons)
     current_time = datetime.now(pytz.timezone(TIMEZONE))
     curr_time = current_time.hour        
