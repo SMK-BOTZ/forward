@@ -10,18 +10,17 @@ CLIENT = CLIENT()
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
-   await message.delete()
-   await message.reply_photo(
-      photo=Config.PICS,
-      reply_markup=main_buttons(),
-      caption="<b>change your settings as your wish</b>"      
-     )
+    await message.delete()
+    await message.reply_text(
+        text="<b>Change your settings as you wish</b>",
+        reply_markup=main_buttons()
+    )
     
 @Client.on_callback_query(filters.regex(r'^settings'))
 async def settings_query(bot, query):
   user_id = query.from_user.id
   i, type = query.data.split("#")
-  buttons = [[InlineKeyboardButton('↩ Back', callback_data="settings#main")]]
+  buttons = [[InlineKeyboardButton('↩ Back', callback_data="help")]]
   
   if type=="main":
      await query.message.edit_text(
