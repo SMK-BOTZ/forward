@@ -118,19 +118,16 @@ async def back(bot, query):
         
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-        media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
-        caption=Translation.ABOUT_TXT),
+    await query.message.edit_text(
+        text=Translation.ABOUT_TXT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
-        )
+    )
+
 
 @Client.on_callback_query(filters.regex(r'^donate'))
 async def donate(bot, query):
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-            media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
-            caption=Translation.DONATE_TXT),
+    await query.message.edit_text(
+        text=Translation.DONATE_TXT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
 
