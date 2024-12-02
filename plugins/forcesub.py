@@ -24,7 +24,7 @@ async def ForceSub(c: Client, m: Message):
         if user.status == "kicked":
             await c.send_message(
                 chat_id=m.from_user.id,
-                text="Sᴏʀʀʏ sɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ᴀᴅᴍɪɴ @Film_Nest .",
+                text="Sᴏʀʀʏ sɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ᴀᴅᴍɪɴ @VR_Necromancer .",
                 disable_web_page_preview=True,
                 parse_mode="Markdown",
                 
@@ -37,10 +37,10 @@ async def ForceSub(c: Client, m: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
+                        InlineKeyboardButton("• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
                     ],
                     [
-                        InlineKeyboardButton("✨ʀᴇꜱᴛᴀʀᴛ ʙᴏᴛ ᴀɢᴀɪɴ", url='https://t.me/VR_Forward_Bot?start=start_')
+                        InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url='https://t.me/VR_Forward_Bot?start=start_')
                     ]
                 ]
             )
