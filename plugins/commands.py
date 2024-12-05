@@ -82,7 +82,7 @@ async def helpcb(bot, query):
             InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
             InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
             ],[
-            InlineKeyboardButton('⛔ ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
             InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
             ]]
         ))
@@ -91,7 +91,7 @@ async def helpcb(bot, query):
 async def how_to_use(bot, query):
     await query.message.edit_text(
         text=Translation.HOW_USE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
         disable_web_page_preview=True
     )
 
@@ -119,7 +119,14 @@ async def back(bot, query):
 async def about(bot, query):
     await query.message.edit_text(
         text=Translation.ABOUT_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
+    )
+
+@Client.on_callback_query(filters.regex(r'^donate'))
+async def donate(bot, query):
+    await query.message.edit_text(
+        text=Translation.DONATE_TXT,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
 
 @Client.on_callback_query(filters.regex(r'^status'))
@@ -128,7 +135,7 @@ async def status(bot, query):
     total_channels = await db.total_channels()
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings, total_channels, temp.BANNED_USERS ),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='help')]]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
     )
