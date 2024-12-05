@@ -35,14 +35,16 @@ async def ForceSub(c: Client, m: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
-                    ],
-                    [
+                        InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ¹", url="https://t.me/+qpu9cloyEIw3ZTll"),
+                        InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ²", url="https://t.me/+oulizPUk9kEzNjll")
+                    ],[
+                        InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ³", url=invite_link.invite_link),
+                        InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ⁴", url="https://t.me/+wfjRuKZsX2M1Zjk1")
+                    ],[
                         InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url='https://t.me/VR_Forward_Bot?start=start_')
                     ]
                 ]
             )
-            
         )
         return 400
     except Exception:
