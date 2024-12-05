@@ -52,7 +52,7 @@ class Translation(object):
 
   DONATE_TXT = """if you liked me ❤️. consider make a donation to support my developer 👦
 
-UPI ID - <code>mohammedrznx@fam</code>"""  
+UPI ID - <code>Maurya-Shubham@Fam</code>"""  
 
   STATUS_TXT = """<b>╔════❰ ʙᴏᴛ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
