@@ -26,7 +26,7 @@ main_buttons = [[
 async def start(client, message):
     user = message.from_user
         
-        # Check for force subscription
+    # Check for force subscription
     Fsub = await ForceSub(client, message)
     if Fsub == 400:
         return
@@ -34,7 +34,7 @@ async def start(client, message):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, message.from_user.mention)
         # Log the new user to the log channel
-        log_channel = Config.LOG_CHANNEL # Replace with your log channel ID
+        log_channel = Config.LOG_CHANNEL  # Replace with your log channel ID
         await client.send_message(
             chat_id=log_channel,
             text=f"#NewUser\n\nIᴅ - {user.id}\nNᴀᴍᴇ - {message.from_user.mention}"
@@ -51,11 +51,11 @@ async def start(client, message):
         gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     else:
         gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
-    await client.send_photo(
+    
+    await client.send_message(
         chat_id=message.chat.id,
-        photo=Config.PICS,
-        reply_markup=reply_markup,
-        caption=Translation.START_TXT.format(message.from_user.mention, gtxt)
+        text=Translation.START_TXT.format(message.from_user.mention, gtxt),
+        reply_markup=reply_markup
     )
 
 #==================Restart Function==================#
@@ -108,20 +108,19 @@ async def back(bot, query):
         gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     else:
         gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-        media=Config.PICS,
-        caption=Translation.START_TXT.format(query.from_user.mention, gtxt)),
-        reply_markup=reply_markup)
+    
+    await query.message.edit_text(
+        text=Translation.START_TXT.format(query.from_user.mention, gtxt),
+        reply_markup=reply_markup
+    )
+
         
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
-    await query.message.edit_media(
-        media=InputMediaPhoto(
-        media="https://graph.org/file/e223aea8aca83e99162bb.jpg",
-        caption=Translation.ABOUT_TXT),
+    await query.message.edit_text(
+        text=Translation.ABOUT_TXT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⛔ Back', callback_data='back')]])
-        )
+    )
 
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
